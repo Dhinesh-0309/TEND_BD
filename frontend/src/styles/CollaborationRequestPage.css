@@ -1,0 +1,112 @@
+/* Additional CSS for Collaboration Requests Page */
+
+.collaboration-section {
+  padding: 7rem 0;
+  background-color: var(--light-color);
+}
+
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: var(--gray-color);
+  background-color: rgba(136, 152, 170, 0.05);
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+}
+
+.request-list {
+  margin-top: 1.5rem;
+}
+
+.request-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(50, 50, 93, 0.05);
+  border-left: 3px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.request-card:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.request-header h4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.request-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(94, 114, 228, 0.1);
+  color: var(--primary-color);
+}
+
+.request-description {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.request-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 0.85rem;
+  color: var(--gray-color);
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.request-actions .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .collaboration-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .request-actions {
+    flex-direction: column;
+  }
+  
+  .request-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .request-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .request-status {
+    margin-top: 0.5rem;
+  }
+}

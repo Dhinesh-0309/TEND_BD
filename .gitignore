@@ -1,0 +1,24 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.sqlite3
+env/
+venv/
+*.log
+
+# Node.js
+node_modules/
+build/
+dist/
+
+# VSCode
+.vscode/
+
+# Docker
+*.env
+*.pid
+
+# OS files
+.DS_Store

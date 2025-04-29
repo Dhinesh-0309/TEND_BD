@@ -1,0 +1,372 @@
+/* ReferralTenderPage.css - Matching the modern style of the website */
+
+:root {
+  --primary-color: #5e72e4;
+  --primary-dark: #4c5ec7;
+  --primary-light: #7f91ff;
+  --secondary-color: #2dce89;
+  --secondary-dark: #26af74;
+  --dark-color: #32325d;
+  --light-color: #f8f9fe;
+  --gray-color: #8898aa;
+  --light-gray: #eeeeee;
+  --text-color: #525f7f;
+  --danger-color: #f5365c;
+  --gradient-primary: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+  --gradient-success: linear-gradient(135deg, #2dce89 0%, #2dcca7 100%);
+  --box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: 0 14px 28px rgba(50, 50, 93, 0.15), 0 8px 16px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+
+/* Page Container */
+.referral-tenders-container {
+  background-color: var(--light-color);
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.page-title {
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.page-subtitle {
+  color: var(--gray-color);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Button Styling */
+.btn-upload {
+  background: var(--gradient-primary);
+  border: none;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-upload:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn-upload i {
+  font-size: 1.1rem;
+}
+
+.btn-close-form {
+  background-color: var(--danger-color);
+}
+
+/* Tenders List Section */
+.tenders-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+}
+
+/* Tender Cards */
+.tenders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.tender-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tender-card:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.tender-card-header {
+  background: var(--gradient-primary);
+  padding: 1.5rem;
+  color: white;
+}
+
+.tender-card-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.tender-card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.tender-card-description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.commission-badge {
+  display: inline-block;
+  background-color: rgba(45, 206, 137, 0.15);
+  color: var(--secondary-color);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tender-card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.external-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.external-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.btn-view-details {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.btn-view-details:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Empty State */
+.empty-state {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+  text-align: center;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+}
+
+.empty-state-title {
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.empty-state-description {
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Upload Form */
+.upload-form-container {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.form-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  color: var(--text-color);
+  background-color: white;
+}
+
+.form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.2rem rgba(94, 114, 228, 0.25);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #b8c4d2;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background: var(--gradient-success);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-submit:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn-submit i {
+  font-size: 1.1rem;
+}
+
+/* Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .tenders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .tenders-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .referral-tenders-container {
+    padding: 1rem 0;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

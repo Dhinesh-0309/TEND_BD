@@ -1,0 +1,250 @@
+/* ForumPost.css - Matching the existing TendBD style */
+
+:root {
+  --primary-color: #5e72e4;
+  --primary-dark: #4c5ec7;
+  --primary-light: #7f91ff;
+  --secondary-color: #2dce89;
+  --dark-color: #32325d;
+  --light-color: #f8f9fe;
+  --gray-color: #8898aa;
+  --light-gray: #eeeeee;
+  --text-color: #525f7f;
+  --gradient-primary: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+  --box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: 0 14px 28px rgba(50, 50, 93, 0.15), 0 8px 16px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+
+.forum-post-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+@media (max-width: 991px) {
+  .forum-post-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form styles */
+.form-wrapper {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-header h2 {
+  color: var(--dark-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.form-control {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--light-gray);
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.2rem rgba(94, 114, 228, 0.15);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* File upload styling */
+.file-upload-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+.custom-file-upload {
+  position: relative;
+  overflow: hidden;
+  border: 2px dashed var(--light-gray);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.custom-file-upload:hover {
+  border-color: var(--primary-light);
+  background-color: rgba(94, 114, 228, 0.05);
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  font-weight: 500;
+  color: var(--gray-color);
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-outline-secondary {
+  border: 1px solid var(--gray-color);
+  color: var(--gray-color);
+  background: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--light-gray);
+  color: var(--dark-color);
+}
+
+/* Guidelines Box */
+.forum-guidelines {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  height: fit-content;
+}
+
+.guidelines-header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.guidelines-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 30%;
+  background-image: radial-gradient(circle farthest-side at 150% 0, rgba(255, 255, 255, 0.15), transparent);
+}
+
+.guidelines-header h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.guidelines-content {
+  padding: 1.5rem;
+}
+
+.guidelines-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guidelines-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.guidelines-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.guidelines-content ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.alert-danger {
+  background-color: #fff5f5;
+  color: #c53030;
+  border-color: #feb2b2;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-muted {
+  color: var(--gray-color) !important;
+}

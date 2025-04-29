@@ -1,0 +1,377 @@
+/* TenderDetail.css - Matching the modern style of your website */
+
+:root {
+  --primary-color: #5e72e4;
+  --primary-dark: #4c5ec7;
+  --primary-light: #7f91ff;
+  --secondary-color: #2dce89;
+  --dark-color: #32325d;
+  --light-color: #f8f9fe;
+  --gray-color: #8898aa;
+  --light-gray: #eeeeee;
+  --text-color: #525f7f;
+  --gradient-primary: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+  --box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: 0 14px 28px rgba(50, 50, 93, 0.15), 0 8px 16px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+
+/* Loading and Error States */
+.loading-container, 
+.error-container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  color: var(--gray-color);
+}
+
+.error-container .btn {
+  margin-top: 1.5rem;
+}
+
+/* Tender Detail Container */
+.tender-detail-container {
+  background-color: var(--light-color);
+  min-height: calc(100vh - 150px);
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+  background: transparent;
+  padding: 0.75rem 0;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--gray-color);
+}
+
+/* Main Tender Card */
+.tender-detail-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.tender-header {
+  padding: 2rem;
+  background: var(--gradient-primary);
+  color: white;
+  position: relative;
+}
+
+.tender-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.tender-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+.tender-content {
+  padding: 2rem;
+}
+
+.tender-section {
+  margin-bottom: 2.5rem;
+}
+
+.tender-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+}
+
+.tender-description {
+  color: var(--text-color);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Tender Details */
+.tender-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  transition: var(--transition);
+  border: 1px solid var(--light-gray);
+}
+
+.detail-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: var(--gray-color);
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 1.1rem;
+}
+
+.collaboration-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--primary-light);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Resource Links */
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  transition: var(--transition);
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid var(--light-gray);
+}
+
+.resource-link:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+}
+
+.resource-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.resource-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-title {
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 1.1rem;
+}
+
+.resource-subtitle {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Action Card */
+.action-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+
+.collaboration-section {
+  margin-bottom: 2rem;
+}
+
+.collab-message {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.collaboration-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+  background: var(--gradient-primary);
+  border: none;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.collaboration-btn:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.share-section {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.share-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.share-buttons .btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Tender Actions */
+.tender-actions {
+  margin-top: 2rem;
+}
+
+.tender-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+
+/* Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .tender-title {
+    font-size: 1.8rem;
+  }
+  
+  .tender-badge {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-card {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tender-header {
+    padding: 1.5rem;
+  }
+  
+  .tender-content {
+    padding: 1.5rem;
+  }
+  
+  .tender-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .resource-link {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .resource-icon {
+    margin-bottom: 0.5rem;
+  }
+}
